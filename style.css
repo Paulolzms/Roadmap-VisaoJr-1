@@ -1,0 +1,142 @@
+:root {
+    /* Primary */
+    --primary-softblue: hsl(215, 51%, 70%);
+    --primary-cyan: hsl(178, 100%, 50%);
+
+    /* Neutral */
+    --bg-main: hsl(217, 54%, 11%);
+    --bg-card: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin: 0px;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+p, span {
+    margin: 0px;
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--primary-softblue);
+    line-height: 1.6rem;
+}
+
+.card {
+    margin: 20px;
+    background-color: var(--bg-card);
+    max-width: 350px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 25px 0px 20px hsl(255 44% 11%), 0px 30px 0px 50px hsl(221 54% 11%);
+}
+
+.imagem {
+    display: grid;
+    border-radius: 15px;
+    z-index: 0;
+}
+
+.view {
+    position: absolute;
+    justify-self: center;
+    align-self: center; 
+    display: none;
+}
+
+.img-principal {
+    max-width: 100%;
+    border-radius: 13px;
+}
+
+.img-principal:hover {
+    opacity: 50%;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.imagem:hover {
+    background: hsl(178, 100%, 50%);
+    transition: 1s;
+}
+
+.img-principal:hover + .view {
+    display: block;
+}
+
+.white {
+    color: white;
+}
+
+.white:hover {
+    color: var(--primary-cyan);
+    cursor: pointer;
+    transition: 1s;
+}
+
+.ethereum {
+    color: var(--primary-cyan);
+    font-weight: 400;
+}
+
+.item1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    border-bottom: solid 1px var(--line);
+    padding-bottom: 25px;
+    justify-content: flex-start;
+}
+
+.info {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.info div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.item2 {
+    display: flex;
+    padding-top: 20px;
+    justify-items: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.item2 img {
+    max-width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+@media (max-width: 301px) {
+    .info {
+        gap: 10px;
+    }
+}
